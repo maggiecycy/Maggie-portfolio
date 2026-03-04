@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hi, I'm Maggie 👋
 
-## Getting Started
+<p align="left">
+  <strong>CS Sophomore @ BTBU | Full-stack Developer | Language Enthusiast</strong>
+</p>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ What I'm building
+I'm a computer science student passionate about building high-performance web architectures and exploring low-level systems.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **[Maggie Portfolio](https://maggie-portfolio-lime.vercel.app/)** - My digital garden built with Next.js 14 and Supabase.
+* **OperatingSystem-Labs** - Deep diving into Linux kernel compilation and OS408 fundamentals.
+* **Mood Journal** - Merging psychology with code to track and visualize emotional growth.
+* **Deep Learning Visualizer** - Making neural network distributions intuitive and interactive.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✍️ Thinking & Writing
+Beyond code, I use this space to document my journey from **Anxious to Secure** attachment and my path toward working/studying in **Europe**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Language Journey**: Currently mastering **French** (Primary), Italian, and German.
+* **CS Foundations**: Reflections on Probability Theory and Operating Systems.
+* **Reading List**: Exploring niche suspense and psychological thrillers.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🎨 Life & Aesthetics
+I believe that a great engineer is also an artist. Here is a glimpse into my world outside the terminal:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **🎧 Currently Listening**: R&B, Indie, Jazz, and Retro Blues. (Music module coming soon)
+* **📷 Photography**: Capturing the quiet moments and architecture of Beijing.
+* **🍰 Baking**: The precision of Chiffon cakes is not unlike the precision of code.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌍 Connect with me
+* **Languages**: Fluent in English (CET-4/6), Native in Mandarin, Learning French.
+* **MBTI**: ISTJ (The Logistician) | **Zodiac**: Pisces.
+* **Find me on**: [Twitter](https://twitter.com/yourhandle) / [Instagram](https://instagram.com/yourhandle) / [GitHub](https://github.com/maggiecycy)
+
+---
+
+<p align="center">
+  <em>"Exploring the intersection of logic and emotion."</em>
+</p>
