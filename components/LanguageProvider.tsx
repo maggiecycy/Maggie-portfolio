@@ -6,15 +6,16 @@ type Props = {
   zh: React.ReactNode;
   en: React.ReactNode;
   fr: React.ReactNode;
+  de: React.ReactNode;   // ✅ 新增
 };
 
-export default function Lang({ zh, en, fr }: Props) {
-  const [lang, setLang] = useState<"zh" | "en" | "fr">("zh");
+export default function Lang({ zh, en, fr, de }: Props) {
+  const [lang, setLang] = useState<"zh" | "en" | "fr" | "de">("zh");
 
   return (
     <div>
-      {/* 顶部切换按钮 */}
-      <div className="flex gap-2 mb-12">
+      {/* 顶部按钮 */}
+      <div className="flex gap-2 mb-12 not-prose">
         <button
           onClick={() => setLang("zh")}
           className={`px-3 py-1 text-sm rounded-md border ${
@@ -25,6 +26,7 @@ export default function Lang({ zh, en, fr }: Props) {
         >
           中文
         </button>
+
         <button
           onClick={() => setLang("en")}
           className={`px-3 py-1 text-sm rounded-md border ${
@@ -35,6 +37,7 @@ export default function Lang({ zh, en, fr }: Props) {
         >
           EN
         </button>
+
         <button
           onClick={() => setLang("fr")}
           className={`px-3 py-1 text-sm rounded-md border ${
@@ -45,14 +48,25 @@ export default function Lang({ zh, en, fr }: Props) {
         >
           FR
         </button>
+
+        {/* ✅ 新增 German 按钮 */}
+        <button
+          onClick={() => setLang("de")}
+          className={`px-3 py-1 text-sm rounded-md border ${
+            lang === "de"
+              ? "bg-slate-900 text-white"
+              : "bg-white text-slate-600"
+          }`}
+        >
+          DE
+        </button>
       </div>
 
-      {/* 整篇文章 */}
-      <div>
-        {lang === "zh" && zh}
-        {lang === "en" && en}
-        {lang === "fr" && fr}
-      </div>
+      {/* 内容 */}
+      {lang === "zh" && zh}
+      {lang === "en" && en}
+      {lang === "fr" && fr}
+      {lang === "de" && de}
     </div>
   );
 }
