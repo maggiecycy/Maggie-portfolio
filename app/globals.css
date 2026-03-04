@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* 这里可以放一些基础的全局重置，比如平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900;
+}
