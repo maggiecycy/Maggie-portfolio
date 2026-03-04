@@ -22,6 +22,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}git add .
-git commit -m "feat: add Vercel Analytics for traffic tracking"
-git push
+}
