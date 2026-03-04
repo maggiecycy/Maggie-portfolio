@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Analytics } from "@vercel/analytics/react"; // 1. 引入 Vercel Analytics 组件
+import { Analytics } from "@vercel/analytics/next"; // 1. 引入 Vercel Analytics 组件
 
 export const metadata: Metadata = {
   title: "Maggie | Personal Portfolio",
