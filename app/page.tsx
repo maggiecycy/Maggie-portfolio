@@ -47,7 +47,7 @@ export default async function Home() {
               欢迎来到我的数字花园：逻辑、语言与自我重塑
             </h3>
             <p className="text-gray-500 mt-3 leading-relaxed">
-              Exploring the intersection of logic and emotion. 记录我作为计科学生在向“安全型”成长过程中的心路历程。
+              Exploring the intersection of logic and emotion. 
             </p>
             <div className="flex items-center gap-4 mt-4 text-sm text-gray-400">
               <span>March 4, 2026</span>

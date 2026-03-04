@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
-/* 这里可以放一些基础的全局重置，比如平滑滚动 */
-html {
-  scroll-behavior: smooth;
-}
+/* 🚀 关键：在这里激活排版插件 */
+@plugin "@tailwindcss/typography"; 
 
-body {
-  @apply bg-slate-50 text-slate-900;
+/* 如果你之前的代码有自定义的主题色，也都在这里定义 */
+@theme {
+  --color-brand: #3b82f6;
 }
