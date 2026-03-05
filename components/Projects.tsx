@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 import { FolderGit2, ExternalLink, Github } from "lucide-react";
 
 // 定义严谨的 TypeScript 接口，匹配我们在 SQL 中建的表结构
