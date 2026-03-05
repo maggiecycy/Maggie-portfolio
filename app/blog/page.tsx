@@ -7,7 +7,6 @@ export default function BlogIndex() {
   return (
     <div className="not-prose max-w-3xl mx-auto py-12 px-6 lg:px-0">
       
-      {/* 将标题和副标题打包在一个 motion.div 中，确保它们作为一个整体浮现 */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,25 +22,48 @@ export default function BlogIndex() {
       </motion.div>
       
       <div className="flex flex-col gap-12">
-        {/* 卡片：原汁原味的 border-l-2 设计 */}
+        {/* 🌟 新增：第二篇博文预览 (置顶) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
-          <Link href="/blog/01-digital-garden" className="block outline-none">
+          <Link href="/blog/02-zero-cm" className="block outline-none">
             <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
-              欢迎来到我的数字花园：逻辑、语言与自我重塑
+              02 · 距离战争 0cm
             </h2>
             <p className="text-slate-500 mt-3 leading-relaxed">
-              Exploring the intersection of logic and emotion. 在逻辑和情绪之间，慢慢找到自己的位置。
+              世界的确定性正在坍塌。从中国到加沙 5765km，从我的眼睛到屏幕 50cm，而我们离战争的心理距离只有 0cm。
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
               <span>March 5, 2026</span>
               <span>•</span>
               <span>5 min read</span>
-              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2">Mindset / Tri-lingual</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Mindset / Tri-lingual</span>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* 第一篇博文预览 (下移) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
+        >
+          <Link href="/blog/01-digital-garden" className="block outline-none">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+              01 · 欢迎来到我的数字花园：逻辑、语言与自我重塑
+            </h2>
+            <p className="text-slate-500 mt-3 leading-relaxed">
+              Exploring the intersection of logic and emotion. 
+            </p>
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
+              <span>March 3, 2026</span>
+              <span>•</span>
+              <span>3 min read</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2">Intro / Tri-lingual</span>
             </div>
           </Link>
         </motion.div>
