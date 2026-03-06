@@ -16,6 +16,7 @@ export default function Navbar() {
     { name: "Music", href: "/music" }, 
     { name: "Photo", href: "/photography" }, 
     { name: "Guestbook", href: "/guestbook" },
+    { name: "Play", href: "/playground" },
     { name: "Contact", href: "/#contact" },
   ];
 
