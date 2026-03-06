@@ -14,7 +14,8 @@ export default function Navbar() {
     { name: "Projects", href: "/#projects" },
     { name: "Writing", href: "/blog" }, 
     { name: "Music", href: "/music" }, 
-    { name: "Photography", href: "/photography" }, 
+    { name: "Photo", href: "/photography" }, 
+    { name: "Guestbook", href: "/guestbook" },
     { name: "Contact", href: "/#contact" },
   ];
 

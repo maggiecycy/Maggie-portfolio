@@ -1,6 +1,7 @@
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
 import PhotographyGallery from "@/components/PhotographyGallery";
+import CommentSection from "@/components/CommentSection";
 
 export const revalidate = 0;
 

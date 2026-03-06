@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/lib/supabase";
+import CommentSection from "./CommentSection";
 
 type Photo = {
   id: string;
@@ -145,12 +146,15 @@ export default function PhotographyGallery({ photos: initialPhotos }: { photos: 
                 </div>
 
                 {/* 核心：完整的评论区占位，保留那份“真实的回声” */}
-                <div className="flex-1">
-                  <h3 className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-4">Comments / 留言</h3>
-                  <div className="text-sm text-slate-500 italic border-l-2 border-slate-200 pl-3 leading-relaxed">
-                    评论模块预留位置。只有打开这扇门，才能看到真实的回声。
-                  </div>
-                </div>
+                <div className="flex-1 mt-6">
+                    <h3 className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-6">
+                        Comments / 留言
+                    </h3>
+                    {/* 去掉了 italic 和 border-l-2，给组件充足的展示空间 */}
+                    <div className="w-full">
+                        <CommentSection photoId={selectedPhoto.id} />
+                    </div>
+                    </div>
               </div>
             </motion.div>
           </div>
