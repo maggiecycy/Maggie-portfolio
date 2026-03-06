@@ -12,9 +12,9 @@ export default function Navbar() {
   const navLinks = [
     { name: "About", href: "/#about" },
     { name: "Projects", href: "/#projects" },
-    { name: "Writing", href: "/blog" }, // 新增：通往数字花园的入口
-    { name: "Music", href: "/music" }, // 新增：通往音乐档案馆的入口
-    { name: "Photo", href: "/photography" }, // 新增：通往摄影画廊的入口
+    { name: "Writing", href: "/blog" }, 
+    { name: "Music", href: "/music" }, 
+    { name: "Photography", href: "/photography" }, 
     { name: "Contact", href: "/#contact" },
   ];
 
@@ -38,8 +38,11 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo 区域：点击返回首页 */}
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl tracking-tighter hover:opacity-80 transition-opacity">
+        {/* 🌟 Logo 区域：去掉了 opacity-80，改为极致克制的 slate 变色 */}
+        <Link 
+          href="/" 
+          className="flex items-center gap-2 font-bold text-xl tracking-tighter text-black hover:text-slate-700 transition-colors duration-300"
+        >
           <Terminal className="w-5 h-5" />
           <span>Maggie.Dev</span>
         </Link>

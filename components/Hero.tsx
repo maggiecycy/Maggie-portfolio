@@ -6,7 +6,7 @@ import { ArrowRight, Github, Code2 } from "lucide-react";
 export default function Hero() {
   return (
     <section className="min-h-[85vh] flex flex-col justify-center items-center text-center px-6 pt-24">
-      {/* 状态徽章：一个带有呼吸灯效果的细节点缀 */}
+      {/* 状态徽章：保持原样 */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ export default function Hero() {
         CS Student & Developer
       </motion.div>
 
-      {/* 主标题：使用文字渐变凸显视觉中心 */}
+      {/* 主标题 */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function Hero() {
         </span>
       </motion.h1>
 
-      {/* Slogan 简介：精准传递你的技术栈与目标 */}
+      {/* Slogan 简介 */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -50,20 +50,30 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="flex flex-col sm:flex-row gap-4"
       >
+        {/* 🌟 核心修改：View Projects 按钮 */}
         <a
           href="#projects"
-          className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-md hover:shadow-lg font-medium"
+          className="group relative overflow-hidden inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg transition-all duration-700 ease-in-out font-medium
+          /* 悬停时的深色渐变微光：Jazz 蓝紫色调 */
+          hover:bg-gradient-to-br hover:from-slate-900 hover:via-indigo-950 hover:to-slate-900
+          /* 柔和的呼吸感外发光 */
+          hover:shadow-[0_0_20px_rgba(79,70,229,0.25)]
+          shadow-md"
         >
-          <Code2 className="w-5 h-5" />
-          View Projects
-          {/* group-hover 配合平移，实现细腻的按钮 Hover 动画 */}
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <Code2 className="w-5 h-5 relative z-10" />
+          <span className="relative z-10">View Projects</span>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
+          
+          {/* 装饰性底层：淡淡的紫色晕染 */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 bg-[radial-gradient(circle_at_center,_rgba(99,102,241,0.1)_0%,_transparent_70%)]"></div>
         </a>
+
+        {/* GitHub 按钮：保持原样，增加一点点平滑过渡 */}
         <a
           href="https://github.com"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors shadow-sm font-medium"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 border border-slate-200 rounded-lg hover:bg-slate-50 transition-all duration-300 shadow-sm font-medium"
         >
           <Github className="w-5 h-5" />
           GitHub

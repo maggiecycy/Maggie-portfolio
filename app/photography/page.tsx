@@ -19,7 +19,7 @@ export default async function PhotographyArchive() {
       
       <div className="mb-16 border-b border-slate-100 pb-10">
         <Link href="/" className="text-sm font-mono text-gray-400 hover:text-black transition-colors mb-8 inline-block">
-          ← Back to Terminal
+          ← Back 
         </Link>
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-4">
           Photography / 瞬间捕获

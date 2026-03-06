@@ -85,7 +85,7 @@ export default async function Home() {
         <div className="flex justify-between items-end mb-10">
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-black">Moments </h2>
-            <p className="text-gray-500 mt-2 text-sm">快门是抵抗虚无的唯一手段</p>
+            <p className="text-gray-500 mt-2 text-sm">在逻辑失效的时刻，退后一步，按下快门。</p>
           </div>
           <Link 
             href="/photography" 

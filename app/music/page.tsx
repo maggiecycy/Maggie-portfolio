@@ -21,10 +21,10 @@ export default async function MusicArchive() {
       {/* 页面头部 */}
       <div className="mb-16 border-b border-slate-100 pb-10">
         <Link href="/" className="text-sm font-mono text-gray-400 hover:text-black transition-colors mb-8 inline-block">
-          ← Back to Terminal
+          ← Back
         </Link>
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-4">
-          Music library / 音乐档案馆
+          Music Library / 音乐档案馆
         </h1>
         <p className="text-slate-500 max-w-2xl leading-relaxed text-sm">
           收录那些试图在现实与梦境之间寻找平衡的背景音。

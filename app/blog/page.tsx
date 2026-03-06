@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 export default function BlogIndex() {
   return (
     <div className="not-prose max-w-3xl mx-auto py-12 px-6 lg:px-0">
-      
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
