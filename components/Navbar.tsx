@@ -13,6 +13,8 @@ export default function Navbar() {
     { name: "About", href: "/#about" },
     { name: "Projects", href: "/#projects" },
     { name: "Writing", href: "/blog" }, // 新增：通往数字花园的入口
+    { name: "Music", href: "/music" }, // 新增：通往音乐档案馆的入口
+    { name: "Photo", href: "/photography" }, // 新增：通往摄影画廊的入口
     { name: "Contact", href: "/#contact" },
   ];
 

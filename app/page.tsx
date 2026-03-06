@@ -3,6 +3,9 @@ import Projects from "@/components/Projects";
 import { supabase } from "@/lib/supabase";
 import { Suspense } from "react";
 import Link from "next/link"; 
+import MusicBoard from "@/components/MusicBoard";
+import Image from "next/image"; // 🌟 必须加上这一行！
+import ContactSection from "@/components/ContactSection";
 
 // 强制 Next.js 每次请求都实时拉取最新数据
 export const revalidate = 0;
@@ -10,14 +13,31 @@ export const revalidate = 0;
 // 这是一个纯正的 Server Component，支持 async/await
 export default async function Home() {
   // 1. 从云端数据库抓取项目数据
-  const { data: projects, error } = await supabase
+  const { data: projects, error: projectsError } = await supabase
     .from("projects")
     .select("*")
     .order("created_at", { ascending: true });
 
-  if (error) {
-    console.error("Fetch error:", error);
+  if (projectsError) {
+    console.error("Fetch projects error:", projectsError);
   }
+
+  // 2. 从云端数据库抓取音乐数据 (注意这里的表名是 mood_board)
+  const { data: tracks, error: tracksError } = await supabase
+    .from("mood_board")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (tracksError) {
+    console.error("Fetch tracks error:", tracksError);
+  }
+
+  //  3. 新增：抓取最近的 4 张摄影作品
+  const { data: recentPhotos } = await supabase
+    .from("photography")
+    .select("*")
+    .order("shot_at", { ascending: false })
+    .limit(4);
 
   return (
     <main className="min-h-screen flex flex-col items-center">
@@ -37,7 +57,7 @@ export default async function Home() {
             <p className="text-gray-500 mt-2 text-sm">记录关于技术、语言学习与成长的深度思考</p>
           </div>
           <Link href="/blog" className="text-sm font-medium text-gray-400 hover:text-black hover:translate-x-1 transition-all duration-300 inline-block">
-            查看全部/view all →
+            View all →
           </Link>
         </div>
 
@@ -60,43 +80,46 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 4. 🚀 居中和谐版 Contact Section */}
-      <section id="contact" className="w-full max-w-4xl px-6 py-32 border-t border-gray-100 mt-10 flex flex-col items-center text-center scroll-mt-24">
-        <div className="max-w-2xl flex flex-col items-center">
-          <h2 className="text-3xl font-bold tracking-tight text-black mb-10">Let's Connect / 联系我</h2>
-          
-          <div className="space-y-8 text-gray-500 leading-relaxed flex flex-col items-center">
-            <p className="text-base md:text-lg text-slate-600">
-              I am actively seeking develop opportunities and genuine connections. Whether you want to discuss system logic, 
-              language learning, share stories, or just say hi, my inbox is always open.
-            </p>
-            
-            <p className="text-sm md:text-base">
-              目前正在积极寻找与开发相关的机会和真诚的人际关系。无论你想探讨底层逻辑、交流语言学习，
-              分享人生故事，或是纯粹路过打个招呼，收件箱随时为你敞开。
-            </p>
-
-            <div className="pt-10 flex flex-col items-center gap-8">
-              <a
-                href="mailto:cy2468729484@gmail.com" 
-                className="inline-flex items-center justify-center px-10 py-4 bg-slate-900 text-white rounded-full hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-xl font-medium"
-              >
-                Say Hello →
-              </a>
-              
-              <div className="flex gap-8 text-sm text-gray-400 font-mono">
-                <a href="https://github.com/maggiecycy" target="_blank" rel="noreferrer" className="hover:text-black transition-colors">GitHub</a>
-                <a href="https://instagram.com/shmilyblue_" target="_blank" rel="noreferrer" className="hover:text-black transition-colors">Instagram</a>
-                <a href="https://www.xiaohongshu.com/user/profile/616834f8000000000102604e" target="_blank" rel="noreferrer" className="hover:text-black transition-colors">Rednote</a>
-              </div>
-            </div>
+      {/* 4 摄影预览模块：放置在 MusicBoard 之前 */}
+      <section className="w-full max-w-4xl px-6 py-16 border-t border-gray-100 mt-10">
+        <div className="flex justify-between items-end mb-10">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight text-black">Moments </h2>
+            <p className="text-gray-500 mt-2 text-sm">快门是抵抗虚无的唯一手段</p>
           </div>
+          <Link 
+            href="/photography" 
+            className="text-sm font-mono text-slate-400 hover:text-slate-900 transition-colors flex items-center gap-2 group"
+          >
+            <span>Gallery</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
         </div>
 
-        <div className="mt-32 pt-8 border-t border-gray-50 w-full text-center text-xs text-gray-300 font-mono uppercase tracking-widest">
-          © 2026 Maggie Cao · Built with Next.js & Passion
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {recentPhotos?.map((photo) => (
+            <Link 
+              key={photo.id} 
+              href="/photography" 
+              className="relative aspect-square overflow-hidden rounded-sm bg-slate-100 group border border-slate-100"
+            >
+              <Image
+                src={photo.image_url}
+                alt="moment"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-110"
+              />
+            </Link>
+          ))}
         </div>
       </section>
+
+      {/* 5 音乐与情绪面板模块 */}
+      <MusicBoard tracks={tracks || []} />
+
+      {/* 4. 居中和谐版 Contact Section */}
+      <ContactSection />
     </main>
   );
 }

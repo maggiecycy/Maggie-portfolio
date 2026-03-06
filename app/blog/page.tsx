@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+
 export default function BlogIndex() {
   return (
     <div className="not-prose max-w-3xl mx-auto py-12 px-6 lg:px-0">
@@ -14,7 +15,7 @@ export default function BlogIndex() {
         className="mb-16"
       >
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          Writing | Digital Garden
+          Writing / Digital Garden
         </h1>
         <p className="text-gray-500 mt-2 text-sm">
           记录关于技术、语言学习与成长的深度思考

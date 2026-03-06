@@ -40,7 +40,7 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="max-w-2xl text-lg md:text-xl text-slate-600 mb-10 leading-relaxed"
       >
-        Exploring Operating Systems, Deep Learning, and building modern web architectures. Always eager to write elegant code and embrace global opportunities.
+        Exploring Tech world and building spiritual homeland. Always eager to write elegant code, have deep conversations, and embrace global opportunities.
       </motion.p>
 
       {/* 交互按钮区域 */}
