@@ -22,11 +22,34 @@ export default function BlogIndex() {
       </motion.div>
       
       <div className="flex flex-col gap-12">
-        {/* 🌟 新增：第二篇博文预览 (置顶) */}
+        {/* 🌟 03: 大厂实习投递指南 (置顶) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
+          className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
+        >
+          <Link href="/blog/03-internship-guide" className="block outline-none">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+              03 · 大厂实习投递完全指南
+            </h2>
+            <p className="text-slate-500 mt-3 leading-relaxed">
+              找实习不是考试，而是一场关于信息差、执行力和心态的博弈。
+            </p>
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
+              <span>March 6, 2026</span>
+              <span>•</span>
+              <span>8 min read</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Career/Internship</span>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* 02: 距离战争 0cm (下移) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/02-zero-cm" className="block outline-none">
@@ -40,16 +63,16 @@ export default function BlogIndex() {
               <span>March 5, 2026</span>
               <span>•</span>
               <span>5 min read</span>
-              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Mindset / Tri-lingual</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Mindset/Geopolitics</span>
             </div>
           </Link>
         </motion.div>
 
-        {/* 第一篇博文预览 (下移) */}
+        {/* 01: 第一篇博文预览 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/01-digital-garden" className="block outline-none">
@@ -63,7 +86,7 @@ export default function BlogIndex() {
               <span>March 3, 2026</span>
               <span>•</span>
               <span>3 min read</span>
-              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2">Intro / Tri-lingual</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2">Intro</span>
             </div>
           </Link>
         </motion.div>

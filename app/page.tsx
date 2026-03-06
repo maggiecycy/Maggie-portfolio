@@ -41,20 +41,20 @@ export default async function Home() {
           </Link>
         </div>
 
-        {/* 博文预览卡片：已更新为战争主题博文 */}
+        {/* 博文预览卡片：大厂实习投递指南 */}
         <div className="group border-l-2 border-gray-200 pl-6 py-1 hover:border-black hover:-translate-y-1 transition-all duration-500 ease-out">
-          <Link href="/blog/02-zero-cm" className="block outline-none">
+          <Link href="/blog/03-internship-guide" className="block outline-none">
             <h3 className="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors duration-300 text-left">
-              02 · 距离战争 0cm：脆弱的确定性与 5765km 的距离
+              03 · 大厂实习投递完全指南
             </h3>
-            <p className="text-gray-500 mt-3 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 text-left">
-              世界的确定性正在坍塌。从中国到加沙 5765km，从我的眼睛到屏幕 50cm，而我们离战争的心理距离只有 0cm。
-            </p>
+            <div className="text-gray-500 mt-3 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 text-left space-y-1">
+              <p>找实习不是考试，而是一场关于信息差、执行力和心态的博弈。</p>
+            </div>
             <div className="flex items-center gap-3 mt-4 text-sm text-gray-400 font-mono transition-colors duration-300">
-              <span>March 5, 2026</span>
+              <span>March 6, 2026</span>
               <span>•</span>
-              <span>5 min read</span>
-              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Mindset / Geopolitics</span>
+              <span>8 min read</span>
+              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Career / Internship</span>
             </div>
           </Link>
         </div>
@@ -67,12 +67,12 @@ export default async function Home() {
           
           <div className="space-y-8 text-gray-500 leading-relaxed flex flex-col items-center">
             <p className="text-base md:text-lg text-slate-600">
-              I am actively seeking development opportunities. Whether you want to discuss system logic, 
-              language learning, share life stories, or just say hi, my inbox is always open.
+              I am actively seeking develop opportunities and genuine connections. Whether you want to discuss system logic, 
+              language learning, share stories, or just say hi, my inbox is always open.
             </p>
             
             <p className="text-sm md:text-base">
-              目前正在积极寻找任何与开发相关的机会。无论你想探讨底层逻辑、交流语言学习，
+              目前正在积极寻找与开发相关的机会和真诚的人际关系。无论你想探讨底层逻辑、交流语言学习，
               分享人生故事，或是纯粹路过打个招呼，收件箱随时为你敞开。
             </p>
 
