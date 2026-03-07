@@ -73,7 +73,7 @@ export default function DigitalTimeCapsule() {
           >
             <div className="pt-10 pb-6 flex flex-col items-center gap-12">
               
-              {/* 🌟 视频与锁定的槽位 */}
+              {/* 视频与锁定的槽位 */}
               <div className="w-full flex flex-col md:flex-row gap-8 items-start justify-center">
                 <div 
                   className="relative aspect-[9/16] w-full max-w-[280px] bg-slate-100 border border-slate-200 overflow-hidden cursor-pointer group rounded-sm shadow-sm"
@@ -107,6 +107,9 @@ export default function DigitalTimeCapsule() {
                       {timeLeft.d}d : {format(timeLeft.h)}h : {format(timeLeft.m)}m : {format(timeLeft.s)}s
                     </div>
                     <p className="text-[10px] text-slate-300 mt-4 leading-relaxed">Wait for 31yrs old M to update :3</p>
+                  </div>
+                  <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 text-[9px] uppercase tracking-widest text-slate-900 font-bold border border-slate-100 z-20">
+                    -2036 / Achievement
                   </div>
                 </div>
               </div>

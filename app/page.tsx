@@ -50,7 +50,7 @@ export default async function Home() {
         <Projects projectsData={projects || []} />
       </div>
       
-      {/* 3. 数字花园预览模块 */}
+      {/* 3. 数字花园预览模块 (已更新为最新博文) */}
       <section className="w-full max-w-4xl px-6 py-16 border-t border-gray-100 mt-10">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -63,18 +63,20 @@ export default async function Home() {
         </div>
 
         <div className="group border-l-2 border-gray-200 pl-6 py-1 hover:border-black hover:-translate-y-1 transition-all duration-500 ease-out">
-          <Link href="/blog/03-internship-guide" className="block outline-none">
+          <Link href="/blog/04-beijing-life" className="block outline-none">
             <h3 className="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors duration-300 text-left">
-              03 · 大厂实习投递完全指南
+              04 · 返京症候：停不下来的 10 号线
             </h3>
             <div className="text-gray-500 mt-3 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 text-left space-y-1">
-              <p>找实习不是考试，而是一场关于信息差、执行力和心态的博弈。</p>
+              <p>有些城市，不需要你上班，你的身体就已经开始加班了。</p>
             </div>
-            <div className="flex items-center gap-3 mt-4 text-sm text-gray-400 font-mono transition-colors duration-300">
-              <span>March 6, 2026</span>
+            <div className="flex items-center gap-3 mt-4 text-sm text-gray-400 font-mono transition-colors duration-300 flex-wrap">
+              <span>March 7, 2026</span>
               <span>•</span>
-              <span>8 min read</span>
-              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Career / Internship</span>
+              <span>6 min read</span>
+              <span>•</span>
+              <span className="tracking-widest text-[13px]">ZH EN FR DE</span>
+              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">City / Observation</span>
             </div>
           </Link>
         </div>
