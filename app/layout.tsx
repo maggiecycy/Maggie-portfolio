@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"; // 1. 引入 Vercel Analytics 组件
 import { MusicProvider } from "@/context/MusicContext";
 import GlobalPlayer from "@/components/GlobalPlayer"; // 2. 引入全局音乐播放器组件
+import LilMaggie from "@/components/LilMaggie";
 
 export const metadata: Metadata = {
   title: "Maggie | Personal Portfolio",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <MusicProvider> {/* 1. 包裹整个应用，让音乐状态在全局可用 */}
           <Navbar />
           {children}
+          <LilMaggie /> {/* 2. 将 LilMaggie 组件放在全局，确保它在所有页面都可见 */}
           <Analytics /> {/* 2. 将组件挂载在 body 内的最后面 */}
           <GlobalPlayer />
         </MusicProvider>

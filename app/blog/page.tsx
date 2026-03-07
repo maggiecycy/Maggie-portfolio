@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-
+import Newsletter from "@/components/Newsletter";
 
 export default function BlogIndex() {
   return (
@@ -16,9 +16,10 @@ export default function BlogIndex() {
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           Writing / Digital Garden
         </h1>
-        <p className="text-gray-500 mt-2 text-sm">
+        <p className="text-gray-500 mt-2 text-sm mb-8">
           记录关于技术、语言学习与成长的深度思考
         </p>
+
       </motion.div>
       
       <div className="flex flex-col gap-12">
@@ -91,6 +92,9 @@ export default function BlogIndex() {
           </Link>
         </motion.div>
       </div>
+
+      {/* 保留底部的订阅框*/}
+      <Newsletter />
     </div>
   );
 }

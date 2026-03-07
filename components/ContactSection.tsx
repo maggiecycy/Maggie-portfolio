@@ -35,15 +35,33 @@ export default function ContactSection() {
             </a>
             
             <div className="flex gap-8 text-sm text-gray-400 font-mono">
-              <a href="https://github.com/maggiecycy" target="_blank" rel="noreferrer" className="hover:text-black transition-colors hover:underline underline-offset-4">GitHub</a>
-              <a href="https://instagram.com/shmilyblue_" target="_blank" rel="noreferrer" className="hover:text-black transition-colors hover:underline underline-offset-4">Instagram</a>
-              <a href="https://www.xiaohongshu.com/user/profile/616834f8000000000102604e" target="_blank" rel="noreferrer" className="hover:text-black transition-colors hover:underline underline-offset-4">Rednote</a>
-            </div>
+            <a href="https://github.com/maggiecycy" target="_blank" rel="noreferrer" className="hover:text-black transition-colors hover:underline underline-offset-4">GitHub</a>
+            <a href="https://instagram.com/shmilyblue_" target="_blank" rel="noreferrer" className="hover:text-black transition-colors hover:underline underline-offset-4">Instagram</a>
+            
+            {/* 🌟 替代原有的 Rednote */}
+            <button 
+              onClick={() => {
+                // 这里的 ID 换成你真正的微信号
+                navigator.clipboard.writeText("CY_20050224MAGGIE"); 
+                // 使用更低调的反馈方式，或者干脆不弹窗，直接改文字
+                const btn = document.getElementById('wechat-btn');
+                if (btn) {
+                  const originalText = btn.innerText;
+                  btn.innerText = "ID copied ☑️";
+                  setTimeout(() => { btn.innerText = originalText; }, 2000);
+                }
+              }}
+              id="wechat-btn"
+              className="hover:text-black transition-colors hover:underline underline-offset-4 outline-none cursor-pointer text-left"
+            >
+              WeChat
+            </button>
+          </div>
           </div>
         </div>
 
         <div className="mt-32 pt-8 border-t border-gray-50 w-full text-center text-xs text-gray-300 font-mono uppercase tracking-widest">
-          © 2026 Maggie Cao · Built with Next.js and Passion
+          © 2026 Maggie Cao · Built with Next.js, ♥ and Passion
         </div>
         </div>
       </motion.section>

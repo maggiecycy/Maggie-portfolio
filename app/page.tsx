@@ -4,8 +4,9 @@ import { supabase } from "@/lib/supabase";
 import { Suspense } from "react";
 import Link from "next/link"; 
 import MusicBoard from "@/components/MusicBoard";
-import Image from "next/image"; // 🌟 必须加上这一行！
+import Image from "next/image"; 
 import ContactSection from "@/components/ContactSection";
+import DigitalTimeCapsule from "@/components/DigitalTimeCapsule"; // 🌟 1. 引入时间胶囊组件
 
 // 强制 Next.js 每次请求都实时拉取最新数据
 export const revalidate = 0;
@@ -22,7 +23,7 @@ export default async function Home() {
     console.error("Fetch projects error:", projectsError);
   }
 
-  // 2. 从云端数据库抓取音乐数据 (注意这里的表名是 mood_board)
+  // 2. 从云端数据库抓取音乐数据
   const { data: tracks, error: tracksError } = await supabase
     .from("mood_board")
     .select("*")
@@ -32,7 +33,7 @@ export default async function Home() {
     console.error("Fetch tracks error:", tracksError);
   }
 
-  //  3. 新增：抓取最近的 4 张摄影作品
+  // 3. 新增：抓取最近的 4 张摄影作品
   const { data: recentPhotos } = await supabase
     .from("photography")
     .select("*")
@@ -41,15 +42,15 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center">
-      {/* 1. 顶部英雄区 (已找回) */}
+      {/* 1. 顶部英雄区 */}
       <Hero />
       
-      {/* 2. 项目展示区：增加 id 和滚动边距 */}
+      {/* 2. 项目展示区 */}
       <div id="projects" className="w-full scroll-mt-24">
         <Projects projectsData={projects || []} />
       </div>
       
-      {/* 3. 数字花园 (Digital Garden) 预览模块 - 更新为最新的第 02 篇博文 */}
+      {/* 3. 数字花园预览模块 */}
       <section className="w-full max-w-4xl px-6 py-16 border-t border-gray-100 mt-10">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -61,7 +62,6 @@ export default async function Home() {
           </Link>
         </div>
 
-        {/* 博文预览卡片：大厂实习投递指南 */}
         <div className="group border-l-2 border-gray-200 pl-6 py-1 hover:border-black hover:-translate-y-1 transition-all duration-500 ease-out">
           <Link href="/blog/03-internship-guide" className="block outline-none">
             <h3 className="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors duration-300 text-left">
@@ -80,7 +80,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 4 摄影预览模块：放置在 MusicBoard 之前 */}
+      {/* 4 摄影预览模块 */}
       <section className="w-full max-w-4xl px-6 py-16 border-t border-gray-100 mt-10">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -118,7 +118,12 @@ export default async function Home() {
       {/* 5 音乐与情绪面板模块 */}
       <MusicBoard tracks={tracks || []} />
 
-      {/* 4. 居中和谐版 Contact Section */}
+      {/* 6. 数字时间胶囊模块：放置在页脚联系方式之前 */}
+      <div className="w-full bg-white relative z-10 pb-16">
+        <DigitalTimeCapsule />
+      </div>
+
+      {/* 7. 居中和谐版 Contact Section */}
       <ContactSection />
     </main>
   );
