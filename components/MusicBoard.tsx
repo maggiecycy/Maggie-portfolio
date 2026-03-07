@@ -19,7 +19,7 @@ export default function MusicBoard({ tracks }: { tracks: Track[] }) {
   // 🌟 从全局接管状态
   const { currentTrack, isPlaying, playTrack } = useMusic();
 
-  // ✂️ 核心逻辑：只取数组前 5 项进行预览展示
+  // 核心逻辑：只取数组前 5 项进行预览展示
   const recentTracks = tracks.slice(0, 5);
 
   return (
@@ -28,7 +28,7 @@ export default function MusicBoard({ tracks }: { tracks: Track[] }) {
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-black">Resonance</h2>
           <p className="text-gray-500 mt-2 text-sm">
-            心跳的频率是多少？
+            Heartbeat Frequency
           </p>
         </div>
         

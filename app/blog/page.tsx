@@ -22,11 +22,34 @@ export default function BlogIndex() {
       </motion.div>
       
       <div className="flex flex-col gap-12">
-        {/* 🌟 04: 北京体感 (最新置顶) */}
+        {/* 🌟 05: 理性执念 (最新置顶) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
+          className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
+        >
+          <Link href="/blog/05-rational-obsession" className="block outline-none">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+              05 · 为什么理性的人更容易陷入执念？
+            </h2>
+            <p className="text-slate-500 mt-3 leading-relaxed">
+              暧昧时代的“蔡加尼克效应”与自救指南
+            </p>
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
+              <span>March 7, 2026</span>
+              <span>•</span>
+              <span>10 min read</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Mindset/Psychology</span>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* 04: 北京体感 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/04-beijing-life" className="block outline-none">
@@ -49,7 +72,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/03-internship-guide" className="block outline-none">
@@ -72,7 +95,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/02-zero-cm" className="block outline-none">
@@ -80,7 +103,7 @@ export default function BlogIndex() {
               02 · 距离战争 0cm
             </h2>
             <p className="text-slate-500 mt-3 leading-relaxed">
-              世界的确定性正在坍塌。从中国到加沙 5765km，从我的眼睛到屏幕 50cm，而我们离战争的心理距离只有 0cm。
+              世界的确定性正在坍塌。我们离战争的心理距离只有 0cm。
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
               <span>March 5, 2026</span>
@@ -95,7 +118,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/01-digital-garden" className="block outline-none">
@@ -115,7 +138,6 @@ export default function BlogIndex() {
         </motion.div>
       </div>
 
-      {/* 保留底部的订阅框*/}
       <Newsletter />
     </div>
   );

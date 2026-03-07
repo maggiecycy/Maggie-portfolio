@@ -6,12 +6,11 @@ import Link from "next/link";
 import MusicBoard from "@/components/MusicBoard";
 import Image from "next/image"; 
 import ContactSection from "@/components/ContactSection";
-import DigitalTimeCapsule from "@/components/DigitalTimeCapsule"; // 🌟 1. 引入时间胶囊组件
+import DigitalTimeCapsule from "@/components/DigitalTimeCapsule";
 
 // 强制 Next.js 每次请求都实时拉取最新数据
 export const revalidate = 0;
 
-// 这是一个纯正的 Server Component，支持 async/await
 export default async function Home() {
   // 1. 从云端数据库抓取项目数据
   const { data: projects, error: projectsError } = await supabase
@@ -33,7 +32,7 @@ export default async function Home() {
     console.error("Fetch tracks error:", tracksError);
   }
 
-  // 3. 新增：抓取最近的 4 张摄影作品
+  // 3. 抓取最近的 4 张摄影作品
   const { data: recentPhotos } = await supabase
     .from("photography")
     .select("*")
@@ -50,7 +49,7 @@ export default async function Home() {
         <Projects projectsData={projects || []} />
       </div>
       
-      {/* 3. 数字花园预览模块 (已更新为最新博文) */}
+      {/* 3. 数字花园预览模块 (🌟 已更新为 05 号最新博文) */}
       <section className="w-full max-w-4xl px-6 py-16 border-t border-gray-100 mt-10">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -62,21 +61,22 @@ export default async function Home() {
           </Link>
         </div>
 
+        {/* 🌟 05: 为什么理性的人更容易陷入执念？ */}
         <div className="group border-l-2 border-gray-200 pl-6 py-1 hover:border-black hover:-translate-y-1 transition-all duration-500 ease-out">
-          <Link href="/blog/04-beijing-life" className="block outline-none">
+          <Link href="/blog/05-rational-obsession" className="block outline-none">
             <h3 className="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors duration-300 text-left">
-              04 · 返京症候：停不下来的 10 号线
+              05 · 为什么理性的人更容易陷入执念？
             </h3>
             <div className="text-gray-500 mt-3 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 text-left space-y-1">
-              <p>有些城市，不需要你上班，你的身体就已经开始加班了。</p>
+              <p>暧昧时代的“蔡加尼克效应”与自救指南</p>
             </div>
             <div className="flex items-center gap-3 mt-4 text-sm text-gray-400 font-mono transition-colors duration-300 flex-wrap">
               <span>March 7, 2026</span>
               <span>•</span>
-              <span>6 min read</span>
+              <span>10 min read</span>
               <span>•</span>
               <span className="tracking-widest text-[13px]">ZH EN FR DE</span>
-              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">City / Observation</span>
+              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Mindset / Psychology</span>
             </div>
           </Link>
         </div>
@@ -87,7 +87,7 @@ export default async function Home() {
         <div className="flex justify-between items-end mb-10">
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-black">Moments </h2>
-            <p className="text-gray-500 mt-2 text-sm">在逻辑失效的时刻，退后一步，按下快门。</p>
+            <p className="text-gray-500 mt-2 text-sm">退后一步，按下快门。</p>
           </div>
           <Link 
             href="/photography" 
@@ -120,7 +120,7 @@ export default async function Home() {
       {/* 5 音乐与情绪面板模块 */}
       <MusicBoard tracks={tracks || []} />
 
-      {/* 6. 数字时间胶囊模块：放置在页脚联系方式之前 */}
+      {/* 6. 数字时间胶囊模块 */}
       <div className="w-full bg-white relative z-10 pb-16">
         <DigitalTimeCapsule />
       </div>
