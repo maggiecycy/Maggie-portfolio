@@ -22,11 +22,36 @@ export default function BlogIndex() {
       </motion.div>
       
       <div className="flex flex-col gap-12">
-        {/* 🌟 05: 理性执念 (最新置顶) */}
+        {/* 🌟 06: 饮食焦虑 (最新置顶) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
+          className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
+        >
+          <Link href="/blog/06-food-anxiety" className="block outline-none">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+              06 · 为什么我们越来越不会吃饭了
+            </h2>
+            <p className="text-slate-500 mt-3 leading-relaxed">
+              从火锅到轻食：现代饮食焦虑的诞生。也许真正的问题不是我们吃了什么，而是我们逐渐失去了对身体的信任。
+            </p>
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
+              <span>March 8, 2026</span>
+              <span>•</span>
+              <span>8 min read</span>
+              <span>•</span>
+              <span className="tracking-widest text-[13px]">ZH EN FR DE</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Society/Culture</span>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* 05: 理性执念 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/05-rational-obsession" className="block outline-none">
@@ -36,7 +61,7 @@ export default function BlogIndex() {
             <p className="text-slate-500 mt-3 leading-relaxed">
               暧昧时代的“蔡加尼克效应”与自救指南
             </p>
-            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
               <span>March 7, 2026</span>
               <span>•</span>
               <span>10 min read</span>
@@ -49,7 +74,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/04-beijing-life" className="block outline-none">
@@ -59,10 +84,12 @@ export default function BlogIndex() {
             <p className="text-slate-500 mt-3 leading-relaxed">
               有些城市，不需要你上班，你的身体就已经开始加班了。
             </p>
-            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
               <span>March 7, 2026</span>
               <span>•</span>
               <span>6 min read</span>
+              <span>•</span>
+              <span className="tracking-widest text-[13px]">ZH EN FR DE</span>
               <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">City/Observation</span>
             </div>
           </Link>
@@ -72,7 +99,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/03-internship-guide" className="block outline-none">
@@ -95,7 +122,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/02-zero-cm" className="block outline-none">
@@ -118,7 +145,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/01-digital-garden" className="block outline-none">
