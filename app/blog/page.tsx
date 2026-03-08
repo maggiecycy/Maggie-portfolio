@@ -41,7 +41,6 @@ export default function BlogIndex() {
               <span>•</span>
               <span>8 min read</span>
               <span>•</span>
-              <span className="tracking-widest text-[13px]">ZH EN FR DE</span>
               <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Society/Culture</span>
             </div>
           </Link>
