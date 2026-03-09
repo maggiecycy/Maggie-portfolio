@@ -22,18 +22,48 @@ export default function BlogIndex() {
       </motion.div>
       
       <div className="flex flex-col gap-12">
-        {/* 🌟 06: 饮食焦虑 (最新置顶) */}
+        {/* 🌟 07: 亲密关系防弹衣 (最新置顶) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
-          <Link href="/blog/06-food-anxiety" className="block outline-none">
-            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
-              06 · 为什么我们越来越不会吃饭了
+          <Link href="/blog/07-emotional-defense" className="block outline-none">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
+              07 · 现代情感博弈与自我保护-3.8妇女节快乐！
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                Emotional Games and Self-Protection — Happy Women's Day!
+              </span>
             </h2>
-            <p className="text-slate-500 mt-3 leading-relaxed">
+            <p className="text-slate-500 mt-4 leading-relaxed">
+              Dating 中，女生最该学的不是讨好，是筛选。
+            </p>
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
+              <span>March 9, 2026</span>
+              <span>•</span>
+              <span>8 min read</span>
+              <span>•</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Relationships/Mindset</span>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* 06: 饮食焦虑 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
+        >
+          <Link href="/blog/06-food-anxiety" className="block outline-none">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
+              06 · 为什么我们越来越不会吃饭了
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                Why We Are Forgetting How to Eat
+              </span>
+            </h2>
+            <p className="text-slate-500 mt-4 leading-relaxed">
               从火锅到轻食：现代饮食焦虑的诞生。也许真正的问题不是我们吃了什么，而是我们逐渐失去了对身体的信任。
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
@@ -50,14 +80,17 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/05-rational-obsession" className="block outline-none">
-            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
               05 · 为什么理性的人更容易陷入执念？
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                Why Rational People Are More Prone to Obsession
+              </span>
             </h2>
-            <p className="text-slate-500 mt-3 leading-relaxed">
+            <p className="text-slate-500 mt-4 leading-relaxed">
               暧昧时代的“蔡加尼克效应”与自救指南
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
@@ -73,14 +106,17 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/04-beijing-life" className="block outline-none">
-            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
               04 · 返京症候：停不下来的 10 号线
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                Return-to-Beijing Syndrome: The Relentless Line 10
+              </span>
             </h2>
-            <p className="text-slate-500 mt-3 leading-relaxed">
+            <p className="text-slate-500 mt-4 leading-relaxed">
               有些城市，不需要你上班，你的身体就已经开始加班了。
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
@@ -98,14 +134,17 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/03-internship-guide" className="block outline-none">
-            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
               03 · 大厂实习投递完全指南
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                Big Tech Internship Application Guide
+              </span>
             </h2>
-            <p className="text-slate-500 mt-3 leading-relaxed">
+            <p className="text-slate-500 mt-4 leading-relaxed">
               找实习不是考试，而是一场关于信息差、执行力和心态的博弈。
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
@@ -121,14 +160,17 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/02-zero-cm" className="block outline-none">
-            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
               02 · 距离战争 0cm
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                0cm from War
+              </span>
             </h2>
-            <p className="text-slate-500 mt-3 leading-relaxed">
+            <p className="text-slate-500 mt-4 leading-relaxed">
               世界的确定性正在坍塌。我们离战争的心理距离只有 0cm。
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">
@@ -144,14 +186,17 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/01-digital-garden" className="block outline-none">
-            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
               01 · 欢迎来到我的数字花园：逻辑、语言与自我重塑
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                Welcome to My Digital Garden: Logic, Language, and Self-Reinvention
+              </span>
             </h2>
-            <p className="text-slate-500 mt-3 leading-relaxed">
+            <p className="text-slate-500 mt-4 leading-relaxed">
               Exploring the intersection of logic and emotion. 
             </p>
             <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono">

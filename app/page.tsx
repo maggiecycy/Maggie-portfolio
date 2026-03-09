@@ -49,7 +49,7 @@ export default async function Home() {
         <Projects projectsData={projects || []} />
       </div>
       
-      {/* 3. 数字花园预览模块 (🌟 已更新为 06 号最新博文) */}
+      {/* 3. 数字花园预览模块 (🌟 已更新为 07 号最新博文) */}
       <section className="w-full max-w-4xl px-6 py-16 border-t border-gray-100 mt-10">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -61,22 +61,25 @@ export default async function Home() {
           </Link>
         </div>
 
-        {/* 🌟 06: 为什么我们越来越不会吃饭了 */}
+        {/* 🌟 07: 亲密关系防弹衣 */}
         <div className="group border-l-2 border-gray-200 pl-6 py-1 hover:border-black hover:-translate-y-1 transition-all duration-500 ease-out">
-          <Link href="/blog/06-food-anxiety" className="block outline-none">
-            <h3 className="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors duration-300 text-left">
-              06 · 为什么我们越来越不会吃饭了
+          <Link href="/blog/07-emotional-defense" className="block outline-none">
+            <h3 className="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors duration-300 text-left leading-snug">
+              07 · 现代情感博弈与自我保护——3.8妇女节快乐！
+              <span className="block text-[15px] font-medium text-gray-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                Emotional Games and Self-Protection — Happy Women's Day!
+              </span>
             </h3>
             <div className="text-gray-500 mt-3 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 text-left space-y-1">
-              <p>从火锅到轻食：现代饮食焦虑的诞生。也许真正的问题不是我们吃了什么，而是我们逐渐失去了对身体的信任。</p>
+              <p>Dating 中，女生最该学的不是讨好，是筛选</p>
             </div>
             <div className="flex items-center gap-3 mt-4 text-sm text-gray-400 font-mono transition-colors duration-300 flex-wrap">
-              <span>March 8, 2026</span>
+              <span>March 9, 2026</span>
               <span>•</span>
               <span>8 min read</span>
               <span>•</span>
               <span className="tracking-widest text-[13px]">ZH EN FR DE</span>
-              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Society / Culture</span>
+              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Relationships / Mindset</span>
             </div>
           </Link>
         </div>
