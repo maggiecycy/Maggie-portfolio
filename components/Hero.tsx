@@ -70,7 +70,7 @@ export default function Hero() {
 
         {/* GitHub 按钮：保持原样，增加一点点平滑过渡 */}
         <a
-          href="https://github.com"
+          href="https://github.com/maggiecycy"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 border border-slate-200 rounded-lg hover:bg-slate-50 transition-all duration-300 shadow-sm font-medium"
