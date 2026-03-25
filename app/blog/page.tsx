@@ -22,11 +22,38 @@ export default function BlogIndex() {
       </motion.div>
       
       <div className="flex flex-col gap-12">
-        {/* 🌟 09: 在死亡的阴影里看见生命 (最新置顶) */}
+        {/* 🌟 09: 隐形的主场 (最新置顶) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
+          className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
+        >
+          <Link href="/blog/09-invisible-immigrants" className="block outline-none">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors text-slate-900 leading-snug">
+              09 · 隐形的主场：跨语言生存的摩擦力
+              <span className="block text-[17px] font-medium text-slate-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
+                The Invisible Home Field: The Friction of Living in Translation
+              </span>
+            </h2>
+            <p className="text-slate-500 mt-4 leading-relaxed">
+              “读新闻不用查翻译到底是什么感觉？” 
+            </p>
+            <div className="flex items-center gap-3 mt-4 text-sm text-slate-400 font-mono flex-wrap">
+              <span>March 25, 2026</span>
+              <span>•</span>
+              <span>10 min read</span>
+              <span>•</span>
+              <span className="px-2 py-0.5 bg-slate-50 text-slate-500 rounded text-xs ml-2 font-medium">Sociology/Identity</span>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* 08: 在死亡的阴影里看见生命 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/08-life-under-shadows" className="block outline-none">
@@ -49,11 +76,11 @@ export default function BlogIndex() {
           </Link>
         </motion.div>
 
-        {/* 07: 亲密关系防弹衣 */}
+        {/* 07: 现代情感博弈 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/07-emotional-defense" className="block outline-none">
@@ -80,7 +107,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/06-food-anxiety" className="block outline-none">
@@ -107,7 +134,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/05-rational-obsession" className="block outline-none">
@@ -133,7 +160,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/04-beijing-life" className="block outline-none">
@@ -161,7 +188,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/03-internship-guide" className="block outline-none">
@@ -187,7 +214,7 @@ export default function BlogIndex() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/02-zero-cm" className="block outline-none">
@@ -209,11 +236,11 @@ export default function BlogIndex() {
           </Link>
         </motion.div>
 
-        {/* 01: 第一篇博文预览 */}
+        {/* 01: 第一篇博文 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
           className="group border-l-2 border-slate-100 pl-6 hover:border-slate-900 transition-all duration-300"
         >
           <Link href="/blog/01-digital-garden" className="block outline-none">
