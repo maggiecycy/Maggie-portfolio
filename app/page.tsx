@@ -49,7 +49,7 @@ export default async function Home() {
         <Projects projectsData={projects || []} />
       </div>
       
-      {/* 3. 数字花园预览模块 (🌟 已同步为 09 号博文) */}
+      {/* 3. 数字花园预览模块 (🌟 已同步为最新 08 号博文) */}
       <section className="w-full max-w-4xl px-6 py-16 border-t border-gray-100 mt-10">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -61,24 +61,24 @@ export default async function Home() {
           </Link>
         </div>
 
-        {/* 🌟 09: 隐形的主场 */}
+        {/* 🌟 08: 在死亡的阴影里看见生命 */}
         <div className="group border-l-2 border-gray-200 pl-6 py-1 hover:border-black hover:-translate-y-1 transition-all duration-500 ease-out">
-          <Link href="/blog/09-invisible-immigrants" className="block outline-none">
+          <Link href="/blog/08-life-under-shadows" className="block outline-none">
             <h3 className="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors duration-300 text-left leading-snug">
-              09 · 隐形的主场：跨语言生存的摩擦力 
+              08 · 在死亡的阴影里看见生命
               <span className="block text-[15px] font-medium text-gray-400 mt-1.5 tracking-wide group-hover:text-blue-400/80 transition-colors">
-                The Invisible Home Field: The Friction of Living in Translation
+                Finding Life in the Shadows of Death
               </span>
             </h3>
             <div className="text-gray-500 mt-3 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 text-left space-y-1">
-              <p>“读新闻不用查翻译到底是什么感觉？” </p>
+              <p>“你坐下来吃晚饭，而你所熟知的生活已经结束。在一次心跳的瞬间。”</p>
             </div>
             <div className="flex items-center gap-3 mt-4 text-sm text-gray-400 font-mono transition-colors duration-300 flex-wrap">
-              <span>March 25, 2026</span>
+              <span>March 12, 2026</span>
               <span>•</span>
-              <span>10 min read</span>
+              <span>8 min read</span>
               <span>•</span>
-              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Sociology / Identity</span>
+              <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs ml-2 group-hover:bg-slate-100 group-hover:text-slate-700 transition-colors duration-300">Philosophy / Life</span>
             </div>
           </Link>
         </div>
