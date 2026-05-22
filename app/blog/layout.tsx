@@ -32,6 +32,14 @@ export default function BlogLayout({
           prose-blockquote:pl-4
           
           prose-hr:my-16
+
+          prose-img:rounded-lg
+          prose-img:shadow-sm
+          prose-img:my-10
+          prose-figure:my-10
+          prose-figcaption:text-center
+          prose-figcaption:text-sm
+          prose-figcaption:text-slate-500
           
           prose-code:text-slate-700
           prose-pre:bg-slate-50
